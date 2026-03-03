@@ -1,21 +1,9 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  content: ["./app/*/.{ts,tsx}", "./components/*/.{ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-  sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
-},
-
-Fica assim (junto com suas cores):
-
-extend: {
-  colors: { ... },
-  fontFamily: {
-    sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
-  },
-}
       colors: {
         atBg: "#070A0F",
         atPanel: "rgba(255,255,255,0.06)",
@@ -25,11 +13,22 @@ extend: {
         atBlue: "#0066FF",
         atGreen: "#00D96B",
         atPurple: "#7C3AED",
-        atOrange: "#FF8B35"
-      }
-    }
+        atOrange: "#FF8B35",
+      },
+      fontFamily: {
+        sans: [
+          "var(--font-jakarta)",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Arial",
+          "sans-serif",
+        ],
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
 
 export default config;
