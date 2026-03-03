@@ -82,13 +82,13 @@ function StepCard({ s }: { s: Step }) {
 
 export default function FluxoPaciente() {
   return (
-    <section id="como-funciona" className="mx-auto max-w-6xl px-6 py-16">
-      <div className="rounded-3xl border border-atBorder bg-atPanel p-10">
-        <h2 className="text-[32px] font-semibold leading-tight tracking-[-0.02em] text-atText">
+    <section id="como-funciona" className="mx-auto max-w-7xl px-6 py-20">
+      <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-10 lg:p-12">
+        <h2 className="text-[34px] lg:text-[40px] font-semibold leading-[1.1] tracking-[-0.03em] text-atText">
           Do primeiro contato à consulta confirmada
         </h2>
 
-        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-atMuted">
+        <p className="mt-4 max-w-2xl text-[16px] leading-[1.7] text-atMuted">
           Um fluxo padronizado e humanizado que organiza o atendimento e conduz o paciente com segurança até a agenda.
         </p>
 
@@ -96,7 +96,7 @@ export default function FluxoPaciente() {
         <div className="relative mt-10 hidden md:block">
           <div className="absolute left-0 right-0 top-[28px] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-          <div className="grid grid-cols-6 gap-5">
+          <div className="grid grid-cols-3 gap-6 lg:grid-cols-6">
             {steps.map((s) => (
               <div key={s.n} className="relative">
                 {/* ponto na linha */}
