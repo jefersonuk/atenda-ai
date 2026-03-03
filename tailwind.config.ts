@@ -5,26 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        atendaBlue: "#0066FF",
-        atendaGreen: "#00D96B",
-        atendaBlack: "#0A0A0A",
-        atendaGray: "#1F2937",
-        atendaOrange: "#FF8B35",
-        atendaPurple: "#7C3AED"
-      },
-      fontFamily: {
-        display: ["Inter", "system-ui", "sans-serif"],
-        body: ["Inter", "system-ui", "sans-serif"],
-        mono: [
-          "ui-monospace",
-          "SFMono-Regular",
-          "Menlo",
-          "Monaco",
-          "Consolas",
-          "Liberation Mono",
-          "Courier New",
-          "monospace"
-        ]
+        atBg: "#070A0F",
+        atPanel: "rgba(255,255,255,0.06)",
+        atBorder: "rgba(255,255,255,0.12)",
+        atText: "#E7ECF5",
+        atMuted: "rgba(231,236,245,0.72)",
+        atBlue: "#0066FF",
+        atGreen: "#00D96B",
+        atPurple: "#7C3AED",
+        atOrange: "#FF8B35"
       }
     }
   },
