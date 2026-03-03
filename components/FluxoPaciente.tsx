@@ -23,11 +23,11 @@ const steps: Step[] = [
 
 function StepCard({ s }: { s: Step }) {
   const base =
-    "rounded-3xl border p-6 min-h-[190px] flex flex-col justify-between transition";
-  const normal =
-    "border-atBorder bg-white/[0.04] hover:bg-white/[0.06]";
-  const highlighted =
-    "border-atGreen/40 bg-gradient-to-b from-atGreen/10 to-white/[0.03] ring-1 ring-atGreen/25 shadow-[0_0_60px_rgba(0,217,107,0.12)]";
+  "rounded-[26px] border px-6 pt-6 pb-5 min-h-[200px] flex flex-col justify-between transition will-change-transform";
+const normal =
+  "border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] hover:translate-y-[-1px] hover:border-white/15";
+const highlighted =
+  "border-atGreen/35 bg-gradient-to-b from-atGreen/12 to-white/[0.02] ring-1 ring-atGreen/20 shadow-[0_20px_80px_rgba(0,217,107,0.10)]";
 
   return (
     <div className={[base, s.highlight ? highlighted : normal].join(" ")}>
@@ -39,7 +39,7 @@ function StepCard({ s }: { s: Step }) {
               s.highlight ? "border-atGreen/35 bg-atGreen/10" : "border-atBorder bg-white/[0.03]",
             ].join(" ")}
           >
-            <span className="text-lg">{s.icon}</span>
+            <span className="text-[16px] opacity-90">{s.icon}</span>
           </div>
 
           <div className="min-w-0">
@@ -58,7 +58,7 @@ function StepCard({ s }: { s: Step }) {
               </h3>
             </div>
 
-            <p className="mt-2 text-[14px] leading-relaxed text-atMuted">
+            <p className="mt-2 text-[14px] leading-[1.65] text-atMuted">
               {s.desc}
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function FluxoPaciente() {
 
         {/* Desktop: timeline */}
         <div className="relative mt-10 hidden md:block">
-          <div className="absolute left-0 right-0 top-[28px] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          <div className="absolute left-0 right-0 top-[28px] h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
           <div className="grid grid-cols-3 gap-6 lg:grid-cols-6">
             {steps.map((s) => (
@@ -103,7 +103,7 @@ export default function FluxoPaciente() {
                 <div className="flex justify-center">
                   <div
                     className={[
-                      "relative z-10 h-3 w-3 rounded-full",
+                      "relative z-10 h-2.5 w-2.5 rounded-full",
                       s.highlight ? "bg-atGreen" : "bg-atBlue",
                     ].join(" ")}
                   />
