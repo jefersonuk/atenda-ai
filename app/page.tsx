@@ -1,12 +1,12 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Problema from "@/components/Problema";
-import Pilares from "@/components/Pilares";
-import ComoFunciona from "@/components/ComoFunciona";
-import Planos from "@/components/Planos";
-import CTAFinal from "@/components/CTAFinal";
-import Footer from "@/components/Footer";
-import FloatingCTA from "@/components/FloatingCTA";
+iimport Header from "../components/Header";
+import Hero from "../components/Hero";
+import Problema from "../components/Problema";
+import Pilares from "../components/Pilares";
+import ComoFunciona from "../components/ComoFunciona";
+import Planos from "../components/Planos";
+import CTAFinal from "../components/CTAFinal";
+import Footer from "../components/Footer";
+import FloatingCTA from "../components/FloatingCTA";
 
 export default function Home() {
   return (
