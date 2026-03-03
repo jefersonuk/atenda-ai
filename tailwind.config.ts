@@ -4,6 +4,18 @@ const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+  sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+},
+
+Fica assim (junto com suas cores):
+
+extend: {
+  colors: { ... },
+  fontFamily: {
+    sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+  },
+}
       colors: {
         atBg: "#070A0F",
         atPanel: "rgba(255,255,255,0.06)",
