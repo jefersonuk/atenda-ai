@@ -12,3 +12,10 @@ body {
 
 /* melhora o scroll e seleção */
 ::selection { background: rgba(0, 102, 255, 0.35); }
+
+/* melhor leitura e cara premium */
+h1, h2, h3 { letter-spacing: -0.02em; }
+p { letter-spacing: -0.005em; }
+
+/* suaviza bordas e sombras no dark */
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
