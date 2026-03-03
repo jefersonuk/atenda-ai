@@ -82,33 +82,51 @@ export default function FluxoPaciente() {
 
                 {/* card */}
                 <div
-                  className={[
-                    "mt-5 rounded-2xl border p-5 transition",
-                    s.highlight
-                      ? "border-atGreen/40 bg-gradient-to-b from-atGreen/10 to-white/5 hover:bg-atGreen/15"
-                      : "border-atBorder bg-white/5 hover:bg-white/8"
-                  ].join(" ")}
-                >
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={[
-                        "inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-semibold",
-                        s.highlight ? "bg-atGreen/20 text-atText" : "bg-atBlue/15 text-atText"
-                      ].join(" ")}
-                    >
-                      {s.n}
-                    </span>
-                    <h3 className="text-sm font-semibold">{s.title}</h3>
-                  </div>
+  className={[
+    "mt-5 rounded-3xl border p-6 transition",
+    "border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02]",
+    "min-h-[190px] flex flex-col justify-between",
+    s.highlight
+      ? "shadow-[0_0_60px_rgba(0,217,107,0.12)] ring-1 ring-atGreen/30"
+      : "hover:bg-white/[0.06]"
+  ].join(" ")}
+>
+  <div>
+    <div className="flex items-center gap-2">
+      <span
+        className={[
+          "inline-flex h-6 w-6 items-center justify-center rounded-full text-[12px] font-semibold",
+          s.highlight ? "bg-atGreen/15 text-atText" : "bg-atBlue/12 text-atText"
+        ].join(" ")}
+      >
+        {s.n}
+      </span>
 
-                  <p className="mt-3 text-sm text-atMuted">{s.desc}</p>
+      <h3 className="text-[15px] font-medium tracking-[-0.01em]">
+        {s.title}
+      </h3>
+    </div>
 
-                  {s.highlight ? (
-                    <p className="mt-4 text-xs text-atMuted">
-                      Ponto de virada: paciente qualificado, dados organizados e encaminhamento direto para agenda.
-                    </p>
-                  ) : null}
-                </div>
+    <p className="mt-3 text-[14px] leading-relaxed text-atMuted">
+      {s.desc}
+    </p>
+  </div>
+
+  {/* micro-label elegante, sem aumentar a altura */}
+  {s.highlight ? (
+    <div className="mt-5">
+      <span className="inline-flex rounded-full border border-atGreen/30 bg-atGreen/10 px-3 py-1 text-[11px] text-atMuted">
+        Ponto de virada do fluxo
+      </span>
+    </div>
+  ) : (
+    <div className="mt-5">
+      <span className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] text-atMuted">
+        Etapa {s.n}
+      </span>
+    </div>
+  )}
+</div>
 
                 {/* setinha sutil entre etapas */}
                 {idx < steps.length - 1 ? (
