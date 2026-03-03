@@ -1,3 +1,7 @@
+import ParaClinicas from "../components/ParaClinicas";
+import FluxoPaciente from "../components/FluxoPaciente";
+import ProvaClinicas from "../components/ProvaClinicas";
+import SegurancaSaude from "../components/SegurancaSaude";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Problema from "../components/Problema";
@@ -12,12 +16,13 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-atBg text-atText">
       <Header />
-      <Hero />
-      <Problema />
-      <Pilares />
-      <ComoFunciona />
-      <Planos />
-      <CTAFinal />
+<Hero />
+<ParaClinicas />
+<ProvaClinicas />
+<FluxoPaciente />
+<SegurancaSaude />
+<Planos />
+<CTAFinal />
 
       <section id="faq" className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="text-3xl font-semibold tracking-tight">FAQ</h2>
