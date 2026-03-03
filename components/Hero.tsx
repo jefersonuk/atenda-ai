@@ -2,74 +2,86 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <p className="inline-flex items-center rounded-full border bg-white px-3 py-1 text-xs text-atendaGray">
-            Atenda.ai • IA conversacional para atendimento e conversão
-          </p>
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-atBlue/25 blur-3xl" />
+        <div className="absolute top-10 right-[-120px] h-[420px] w-[420px] rounded-full bg-atGreen/20 blur-3xl" />
+        <div className="absolute bottom-[-160px] left-[-160px] h-[520px] w-[520px] rounded-full bg-atPurple/18 blur-3xl" />
+      </div>
 
-          <h1 className="mt-4 font-display text-5xl font-extrabold leading-tight">
-            ATENDIMENTO INTELIGENTE <br />
-            <span className="text-atendaBlue">QUE REALMENTE RESOLVE</span>
-          </h1>
-
-          <p className="mt-6 text-lg text-atendaGray">
-            IA conversacional brasileira que automatiza até 89% do atendimento em 30 dias, com resposta em segundos e integração total ao seu funil.
-          </p>
-
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/briefing"
-              className="bg-atendaBlue text-white px-6 py-3 rounded-xl font-medium hover:opacity-90 transition text-center"
-            >
-              Falar com especialista
-            </Link>
-
-            <Link
-              href="#como-funciona"
-              className="border border-atendaBlue text-atendaBlue px-6 py-3 rounded-xl font-medium hover:bg-blue-50 transition text-center"
-            >
-              Ver como funciona
-            </Link>
-          </div>
-
-          <div className="mt-8 text-sm text-atendaGray flex flex-wrap gap-6">
-            <span>⭐ 4,7/5</span>
-            <span>+150 empresas</span>
-            <span>TMR médio 8s</span>
-          </div>
-        </div>
-
-        <div className="rounded-3xl bg-gradient-to-br from-atendaBlue to-atendaGreen p-1">
-          <div className="bg-white rounded-3xl p-6 shadow-lg">
-            <p className="font-mono text-xs text-gray-500">
-              STATUS: 200_OK • TMR: 8.4s
+      <div className="relative mx-auto max-w-6xl px-6 py-24">
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <p className="inline-flex items-center rounded-full border border-atBorder bg-atPanel px-3 py-1 text-xs text-atMuted">
+              Conversão. Conversão. Conversão. Tecnologia aplicada ao seu atendimento.
             </p>
 
-            <div className="mt-4 space-y-3 text-sm">
-              <div className="bg-gray-100 p-3 rounded-xl">Cliente: Quero saber valores.</div>
-              <div className="bg-atendaBlue text-white p-3 rounded-xl ml-auto max-w-[80%]">
-                Claro. Posso te fazer 3 perguntas rápidas?
+            <h1 className="mt-5 text-5xl font-extrabold leading-tight tracking-tight">
+              Atendimento com IA que <span className="text-atBlue">parece humano</span> e
+              <span className="text-atGreen"> converte</span>.
+            </h1>
+
+            <p className="mt-6 text-lg text-atMuted">
+              Agentes de atendimento por IA para empresas que precisam responder em segundos,
+              qualificar leads e conduzir o cliente até a ação, sem perder o toque humano.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/briefing"
+                className="rounded-xl bg-atBlue px-6 py-3 text-center text-sm font-semibold text-white hover:opacity-90 transition"
+              >
+                Falar com especialista
+              </Link>
+
+              <Link
+                href="#como-funciona"
+                className="rounded-xl border border-atBorder bg-atPanel px-6 py-3 text-center text-sm font-semibold text-atText hover:bg-white/10 transition"
+              >
+                Ver como funciona
+              </Link>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-6 text-sm text-atMuted">
+              <span>Resposta em segundos</span>
+              <span>Qualificação automática</span>
+              <span>Integração com seu funil</span>
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-atBorder bg-atPanel p-6 shadow-xl">
+            <div className="flex items-center justify-between">
+              <p className="font-mono text-xs text-atMuted">STATUS: 200_OK</p>
+              <p className="font-mono text-xs text-atMuted">TMR: 8.4s</p>
+            </div>
+
+            <div className="mt-5 space-y-3 text-sm">
+              <div className="rounded-xl bg-white/5 p-3 text-atText/90">
+                Cliente: Quero saber valores e como funciona.
               </div>
-              <div className="bg-gray-100 p-3 rounded-xl">Cliente: Pode sim.</div>
-              <div className="bg-atendaGreen text-white p-3 rounded-xl ml-auto max-w-[80%]">
-                Perfeito. Qual é seu segmento e por onde chegam mais clientes hoje?
+              <div className="ml-auto max-w-[85%] rounded-xl bg-atBlue p-3 text-white">
+                Perfeito. Posso te fazer 3 perguntas rápidas para te indicar a melhor opção?
+              </div>
+              <div className="rounded-xl bg-white/5 p-3 text-atText/90">
+                Cliente: Pode sim.
+              </div>
+              <div className="ml-auto max-w-[85%] rounded-xl bg-atGreen p-3 text-white">
+                Qual é seu segmento e por onde chegam mais clientes hoje?
               </div>
             </div>
 
             <div className="mt-6 grid grid-cols-3 gap-3">
-              <div className="rounded-xl border p-3">
-                <p className="text-xs text-atendaGray">Resolução</p>
-                <p className="text-base font-semibold text-atendaBlack">89%</p>
+              <div className="rounded-2xl border border-atBorder bg-white/5 p-4">
+                <p className="text-xs text-atMuted">Resolução</p>
+                <p className="mt-1 text-lg font-semibold">89%</p>
               </div>
-              <div className="rounded-xl border p-3">
-                <p className="text-xs text-atendaGray">Uptime</p>
-                <p className="text-base font-semibold text-atendaBlack">99.9%</p>
+              <div className="rounded-2xl border border-atBorder bg-white/5 p-4">
+                <p className="text-xs text-atMuted">Uptime</p>
+                <p className="mt-1 text-lg font-semibold">99.9%</p>
               </div>
-              <div className="rounded-xl border p-3">
-                <p className="text-xs text-atendaGray">LGPD</p>
-                <p className="text-base font-semibold text-atendaBlack">Nativo</p>
+              <div className="rounded-2xl border border-atBorder bg-white/5 p-4">
+                <p className="text-xs text-atMuted">LGPD</p>
+                <p className="mt-1 text-lg font-semibold">Nativo</p>
               </div>
             </div>
           </div>
