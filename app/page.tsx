@@ -10,7 +10,7 @@ import FloatingCTA from "../components/FloatingCTA";
 
 export default function Home() {
   return (
-    <main className="bg-white text-atendaBlack">
+    <main className="min-h-screen bg-atBg text-atText">
       <Header />
       <Hero />
       <Problema />
