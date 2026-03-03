@@ -1,3 +1,5 @@
+Substitua tudo por:
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,26 +10,5 @@ body {
 }
 
 body {
-  font-family: var(--font-jakarta), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #070a0f;
-  color: #e7ecf5;
-}
-
-h1,
-h2,
-h3 {
-  letter-spacing: -0.02em;
-}
-
-p {
-  letter-spacing: -0.005em;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-::selection {
-  background: rgba(0, 102, 255, 0.35);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
 }
