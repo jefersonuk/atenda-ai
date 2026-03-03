@@ -1,4 +1,4 @@
-iimport Header from "../components/Header";
+import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Problema from "../components/Problema";
 import Pilares from "../components/Pilares";
