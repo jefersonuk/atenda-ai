@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import Logos from "../components/Logos";
 import Canais from "../components/Canais";
 import Beneficios from "../components/Beneficios";
 import FluxoPaciente from "../components/FluxoPaciente";
