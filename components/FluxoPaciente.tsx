@@ -82,7 +82,7 @@ const highlighted =
 
 export default function FluxoPaciente() {
   return (
-    <section id="como-funciona" className="mx-auto max-w-7xl px-6 py-20">
+    <section id="fluxo" className="mx-auto max-w-7xl px-6 py-20">
       <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-10 lg:p-12">
         <h2 className="text-[34px] lg:text-[40px] font-semibold leading-[1.1] tracking-[-0.03em] text-atText">
           Do primeiro contato à consulta confirmada
