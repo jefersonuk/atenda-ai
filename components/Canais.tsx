@@ -1,8 +1,10 @@
+import { IconWhatsApp, IconInstagram, IconGlobe } from "./icons";
+
 export default function Canais() {
   const canais = [
-    { title: "WhatsApp", desc: "Triagem, dúvidas e encaminhamento para agenda.", tag: "principal" },
-    { title: "Instagram", desc: "Responde directs e converte interesse em consulta.", tag: "comum" },
-    { title: "Site", desc: "Capta leads e direciona para briefing e agendamento.", tag: "opcional" },
+    { title: "WhatsApp", desc: "Triagem, dúvidas e encaminhamento para agenda.", tag: "principal", Icon: IconWhatsApp },
+    { title: "Instagram", desc: "Responde directs e converte interesse em consulta.", tag: "comum", Icon: IconInstagram },
+    { title: "Site", desc: "Capta leads e direciona para briefing e agendamento.", tag: "opcional", Icon: IconGlobe },
   ];
 
   return (
@@ -25,13 +27,20 @@ export default function Canais() {
               className="rounded-[26px] border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-6"
             >
               <div className="flex items-center justify-between">
-                <h3 className="text-[15px] font-semibold tracking-[-0.01em] text-atText">
-                  {c.title}
-                </h3>
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03]">
+                    <c.Icon className="h-5 w-5 text-atText/90" />
+                  </div>
+                  <h3 className="text-[15px] font-semibold tracking-[-0.01em] text-atText">
+                    {c.title}
+                  </h3>
+                </div>
+
                 <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] text-atMuted">
                   {c.tag}
                 </span>
               </div>
+
               <p className="mt-3 text-[14px] leading-[1.65] text-atMuted">{c.desc}</p>
             </div>
           ))}
